@@ -1,17 +1,43 @@
 
 {
-  "name": "estate_mag_platform-tests",
+  "name": "estate_mag_platform",
   "version": "1.0.0",
-  "description": "Run unit tests on this project.",
+  "description": "A decentralized real estate tokenization platform built on Stacks blockchain using Clarity smart contracts.",
   "type": "module",
-  "private": true,
+  "private": false,
+  "keywords": [
+    "stacks",
+    "clarity",
+    "real-estate",
+    "tokenization",
+    "blockchain",
+    "defi",
+    "smart-contracts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpemily/estate_mag_platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tpemily/estate_mag_platform/issues"
+  },
+  "homepage": "https://github.com/tpemily/estate_mag_platform#readme",
   "scripts": {
     "test": "vitest run",
     "test:report": "vitest run -- --coverage --costs",
-    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm run test:report\""
+    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm run test:report\"",
+    "check": "clarinet check",
+    "console": "clarinet console",
+    "deploy:testnet": "clarinet deploy --testnet",
+    "deploy:mainnet": "clarinet deploy --mainnet",
+    "lint": "echo 'Linting not configured yet'",
+    "format": "echo 'Formatting not configured yet'",
+    "format:check": "echo 'Format check not configured yet'",
+    "build": "echo 'Build completed'",
+    "coverage": "vitest run --coverage"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Estate Mag Platform Team",
+  "license": "MIT",
   "dependencies": {
     "@hirosystems/clarinet-sdk": "^2.14.0",
     "@stacks/transactions": "^6.12.0",
